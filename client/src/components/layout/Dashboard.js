@@ -155,6 +155,47 @@ function DashboardContent() {
               </Grid>
             </Grid>
           </Container>
+          <Container maxWidth='lg' sx={{ mt: 3, mb: 3 }}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={12} md={6} lg={6}>
+                <Card
+                  sx={{
+                    p: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 160,
+                    borderRadius: 2,
+                  }}
+                ></Card>
+              </Grid>
+              <Grid item xs={12} sm={12} md={6} lg={6}>
+                <Card
+                  sx={{
+                    p: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 160,
+                    borderRadius: 2,
+                  }}
+                ></Card>
+              </Grid>
+            </Grid>
+          </Container>
+          <Container maxWidth='lg' sx={{ mt: 3, mb: 3 }}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Card
+                  sx={{
+                    p: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 160,
+                    borderRadius: 2,
+                  }}
+                ></Card>
+              </Grid>
+            </Grid>
+          </Container>
         </Box>
       </Box>
     </ThemeProvider>
