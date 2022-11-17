@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   {
-    path: '/dashboard',
+    path: '/dashboard/user',
     display: 'Dashboard',
     icon: <DashboardIcon />,
   },

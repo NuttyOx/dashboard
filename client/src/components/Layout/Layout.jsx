@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import { mainListItems } from '../Sidebar/listItems';
-import { Avatar, useMediaQuery } from '@mui/material';
+import { Avatar, Container, useMediaQuery } from '@mui/material';
 import avatar from '../../assets/images/profile.jpg';
 import logo from '../../assets/images/thcs-logo-for-web.png';
 import Router from '../../routes/Router';
@@ -111,7 +111,18 @@ const Layout = () => {
           <Divider />
           <List component='nav'>{mainListItems}</List>
         </Drawer>
-        <Router />
+        <Box
+          component='main'
+          sx={{
+            backgroundColor: '#F7F8FA',
+            flexGrow: 1,
+            height: '100vh',
+            overflow: 'auto',
+          }}
+        >
+          <Toolbar />
+          <Router />
+        </Box>
       </Box>
     </ThemeProvider>
   );
