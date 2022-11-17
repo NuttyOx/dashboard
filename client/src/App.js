@@ -1,7 +1,7 @@
-import Dashboard from './components/layout/Dashboard';
+import Dashboard from './pages/Dashboard.jsx';
 
-function App() {
+const App = () => {
   return <Dashboard />;
-}
+};
 
 export default App;

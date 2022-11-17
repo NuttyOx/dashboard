@@ -11,10 +11,11 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { mainListItems } from '../../configs/listItems';
+import { mainListItems } from '../components/Drawer/listItems';
 import { Avatar, Card } from '@mui/material';
-import avatar from '../../assets/images/profile.jpg';
-import logo from '../../assets/images/thcs-logo-for-web.png';
+import avatar from '../assets/images/profile.jpg';
+import logo from '../assets/images/thcs-logo-for-web.png';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 const drawerWidth = 225;
 
@@ -41,7 +42,7 @@ const Drawer = styled(MuiDrawer, {
 
 const mdTheme = createTheme();
 
-function DashboardContent() {
+const DashboardContent = () => {
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -108,50 +109,93 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth='lg' sx={{ mt: 3, mb: 3 }}>
+            <Typography
+              variant='h4'
+              noWrap
+              sx={{ mb: 3, fontWeight: 'bold', color: '#522888' }}
+            >
+              Welcome, Michelle!
+            </Typography>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Card
+                  onClick={() => alert('Clicked!')}
                   sx={{
+                    backgroundColor: '#522888',
                     p: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 160,
+                    height: 140,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h5'
+                    sx={{ color: '#fff', fontWeight: 'bold' }}
+                  >
+                    Submit Ticket
+                  </Typography>
+                </Card>
               </Grid>
               <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Card
+                  onClick={() => alert('Clicked!')}
                   sx={{
+                    backgroundColor: '#522888',
                     p: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 160,
+                    height: 140,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h5'
+                    sx={{ color: '#fff', fontWeight: 'bold' }}
+                  >
+                    Submit Event or Digital Sign image/video
+                  </Typography>
+                </Card>
               </Grid>
               <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Card
+                  onClick={() => alert('Clicked!')}
                   sx={{
+                    backgroundColor: '#522888',
                     p: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 160,
+                    height: 140,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h5'
+                    sx={{ color: '#fff', fontWeight: 'bold' }}
+                  >
+                    Request Equipment
+                  </Typography>
+                </Card>
               </Grid>
               <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Card
+                  onClick={() => alert('Clicked!')}
                   sx={{
+                    backgroundColor: '#522888',
                     p: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 160,
+                    height: 140,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h5'
+                    sx={{ color: '#fff', fontWeight: 'bold' }}
+                  >
+                    Checked out Equipment
+                  </Typography>
+                </Card>
               </Grid>
             </Grid>
           </Container>
@@ -166,8 +210,18 @@ function DashboardContent() {
                     height: 160,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h6'
+                    noWrap
+                    sx={{ fontSize: 18, color: '#522888' }}
+                  >
+                    My Tickets
+                  </Typography>
+                  <Divider />
+                </Card>
               </Grid>
+
               <Grid item xs={12} sm={12} md={6} lg={6}>
                 <Card
                   sx={{
@@ -177,7 +231,16 @@ function DashboardContent() {
                     height: 160,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h6'
+                    noWrap
+                    sx={{ fontSize: 18, color: '#522888' }}
+                  >
+                    My Property
+                  </Typography>
+                  <Divider />
+                </Card>
               </Grid>
             </Grid>
           </Container>
@@ -192,7 +255,16 @@ function DashboardContent() {
                     height: 160,
                     borderRadius: 2,
                   }}
-                ></Card>
+                >
+                  <Typography
+                    variant='h6'
+                    noWrap
+                    sx={{ fontSize: 18, color: '#522888' }}
+                  >
+                    Help Docs
+                  </Typography>
+                  <Divider />
+                </Card>
               </Grid>
             </Grid>
           </Container>
@@ -200,7 +272,7 @@ function DashboardContent() {
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default function Dashboard() {
   return <DashboardContent />;

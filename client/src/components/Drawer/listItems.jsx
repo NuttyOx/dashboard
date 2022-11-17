@@ -9,7 +9,7 @@ import EventIcon from '@mui/icons-material/Event';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 export const mainListItems = (
-  <React.Fragment>
+  <>
     <ListItemButton>
       <ListItemIcon>
         <DashboardIcon />
@@ -26,7 +26,7 @@ export const mainListItems = (
       <ListItemIcon>
         <LaptopIcon />
       </ListItemIcon>
-      <ListItemText primary='Assets' />
+      <ListItemText primary='Property' />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
@@ -40,5 +40,32 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary='Settings' />
     </ListItemButton>
-  </React.Fragment>
+  </>
 );
+
+export const navLinks = [
+  {
+    path: '/dashboard',
+    display: 'Dashboard',
+  },
+  {
+    path: '/bookings',
+    display: 'Users',
+  },
+  {
+    path: '/sell-car',
+    display: 'Tickets',
+  },
+  {
+    path: '/settings',
+    display: 'Rooms',
+  },
+  {
+    path: '/settings',
+    display: 'GH Sensors',
+  },
+  {
+    path: '/settings',
+    display: 'Purchase Orders',
+  },
+];
