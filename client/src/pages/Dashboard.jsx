@@ -12,23 +12,21 @@ import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { mainListItems } from '../components/Drawer/listItems';
-import { Avatar, Card } from '@mui/material';
+import { Avatar, Card, useMediaQuery } from '@mui/material';
 import avatar from '../assets/images/profile.jpg';
 import logo from '../assets/images/thcs-logo-for-web.png';
-import ComputerIcon from '@mui/icons-material/Computer';
 
 const drawerWidth = 225;
 
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme }) => ({
+const AppBar = styled(MuiAppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
 }));
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme }) => ({
+})(({ theme, open }) => ({
   '& .MuiDrawer-paper': {
+    backgroundColor: '#f2f2f2',
     position: 'relative',
     whiteSpace: 'nowrap',
     width: drawerWidth,
@@ -37,12 +35,31 @@ const Drawer = styled(MuiDrawer, {
       duration: theme.transitions.duration.enteringScreen,
     }),
     boxSizing: 'border-box',
+    ...(!open && {
+      backgroundColor: '#f2f2f2',
+      overflowX: 'hidden',
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      width: theme.spacing(7),
+      [theme.breakpoints.up('sm')]: {
+        width: theme.spacing(9),
+      },
+    }),
   },
 }));
 
 const mdTheme = createTheme();
 
 const DashboardContent = () => {
+  const greaterThan375 = useMediaQuery(mdTheme.breakpoints.up('sm'));
+  const [open, setOpen] = React.useState(greaterThan375);
+
+  React.useEffect(() => {
+    setOpen(greaterThan375);
+  }, [greaterThan375]);
+
   return (
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
@@ -83,7 +100,7 @@ const DashboardContent = () => {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant='permanent'>
+        <Drawer variant='permanent' open={open}>
           <Toolbar
             sx={{
               display: 'flex',
@@ -98,10 +115,7 @@ const DashboardContent = () => {
         <Box
           component='main'
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: '#F7F8FA',
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
