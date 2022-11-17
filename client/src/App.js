@@ -1,7 +1,7 @@
-import Dashboard from './pages/Dashboard.jsx';
+import Layout from './components/Layout/Layout';
 
 const App = () => {
-  return <Dashboard />;
+  return <Layout />;
 };
 
 export default App;
