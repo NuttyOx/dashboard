@@ -49,12 +49,12 @@ const Drawer = styled(MuiDrawer, {
 const mdTheme = createTheme();
 
 const Layout = () => {
-  const greaterThan375 = useMediaQuery(mdTheme.breakpoints.up('sm'));
-  const [open, setOpen] = React.useState(greaterThan375);
+  const greaterThan600 = useMediaQuery(mdTheme.breakpoints.up('sm'));
+  const [open, setOpen] = React.useState(greaterThan600);
 
   React.useEffect(() => {
-    setOpen(greaterThan375);
-  }, [greaterThan375]);
+    setOpen(greaterThan600);
+  }, [greaterThan600]);
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -95,6 +95,7 @@ const Layout = () => {
                 alt='Michelle Kejr'
                 src={avatar}
                 sx={{ width: 40, height: 40, ml: 1.5 }}
+                variant='rounded'
               />
             </IconButton>
           </Toolbar>

@@ -3,14 +3,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import {
-  Card,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from '@mui/material';
+import { Card, Table, TableCell, TableHead, TableRow } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const DashboardUser = () => {
@@ -33,7 +26,7 @@ const DashboardUser = () => {
               <Card
                 sx={{
                   backgroundColor: '#522888',
-                  p: 1,
+                  p: 2,
                   display: 'flex',
                   flexDirection: 'column',
                   height: 120,
@@ -54,7 +47,7 @@ const DashboardUser = () => {
               onClick={() => alert('Clicked!')}
               sx={{
                 backgroundColor: '#522888',
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 120,
@@ -74,7 +67,7 @@ const DashboardUser = () => {
               onClick={() => alert('Clicked!')}
               sx={{
                 backgroundColor: '#522888',
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 120,
@@ -85,7 +78,7 @@ const DashboardUser = () => {
                 variant='h5'
                 sx={{ color: '#fff', fontWeight: 'bold' }}
               >
-                Request Equipment
+                Request Property
               </Typography>
             </Card>
           </Grid>
@@ -94,7 +87,7 @@ const DashboardUser = () => {
               onClick={() => alert('Clicked!')}
               sx={{
                 backgroundColor: '#522888',
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 120,
@@ -105,7 +98,7 @@ const DashboardUser = () => {
                 variant='h5'
                 sx={{ color: '#fff', fontWeight: 'bold' }}
               >
-                Checked out Equipment
+                Checked out Accesories
               </Typography>
             </Card>
           </Grid>
@@ -116,7 +109,7 @@ const DashboardUser = () => {
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Card
               sx={{
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 160,
@@ -158,7 +151,7 @@ const DashboardUser = () => {
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Card
               sx={{
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 160,
@@ -182,7 +175,7 @@ const DashboardUser = () => {
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Card
               sx={{
-                p: 1,
+                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 height: 160,
