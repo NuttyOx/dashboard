@@ -6,6 +6,7 @@ import Property from '../pages/Property';
 import Settings from '../pages/Settings';
 import EventSigns from '../pages/EventSigns';
 import NewTicket from '../pages/NewTicket';
+import NewTicketUser from './../pages/NewTicketUser/NewTicketUser';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
       <Route path='/dashboard/user' element={<Dashboard />} />
       <Route path='/tickets' element={<Tickets />} />
       <Route path='/newticket' element={<NewTicket />} />
+      <Route path='/newticketuser' element={<NewTicketUser />} />
       <Route path='/property' element={<Property />} />
       <Route path='/events' element={<EventSigns />} />
       <Route path='/settings' element={<Settings />} />

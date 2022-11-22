@@ -25,7 +25,7 @@ const NewTicket = () => {
   };
 
   return (
-    <Container maxWidth='lg' sx={{ mt: 3, mb: 3 }}>
+    <Container maxWidth='false' sx={{ mt: 3, mb: 3 }}>
       <Typography
         variant='h4'
         noWrap
@@ -42,132 +42,122 @@ const NewTicket = () => {
           borderRadius: 2,
         }}
       >
-        <Grid maxWidth='sm'>
-          <Typography
-            variant='h6'
-            noWrap
-            sx={{ fontSize: 18, color: '#522888' }}
+        <Typography variant='h6' noWrap sx={{ fontSize: 18, color: '#522888' }}>
+          Select Department
+        </Typography>
+        <FormControl>
+          <Select
+            required
+            value={department}
+            onChange={handleChangeDepartment}
+            sx={{ height: 40 }}
           >
-            Select Department
-          </Typography>
-          <FormControl sx={{ maxWidth: 300 }}>
-            <Select
-              required
-              value={department}
-              onChange={handleChangeDepartment}
-              sx={{ height: 40 }}
-            >
-              <MenuItem value={10}>Agronomy</MenuItem>
-              <MenuItem value={20}>HNR</MenuItem>
-              <MenuItem value={30}>PPath</MenuItem>
-            </Select>
+            <MenuItem value={10}>Agronomy</MenuItem>
+            <MenuItem value={20}>HNR</MenuItem>
+            <MenuItem value={30}>PPath</MenuItem>
+          </Select>
+        </FormControl>
 
-            <Typography
-              variant='h6'
-              noWrap
-              sx={{ fontSize: 18, color: '#522888', mt: 2 }}
-            >
-              Select Category
-            </Typography>
+        <Typography
+          variant='h6'
+          noWrap
+          sx={{ fontSize: 18, color: '#522888', mt: 2 }}
+        >
+          Select Category
+        </Typography>
+        <FormControl sx={{ minWidth: 120 }}>
+          <Select
+            required
+            value={category}
+            onChange={handleChangeCategory}
+            sx={{ height: 40 }}
+          >
+            <MenuItem value={10}>Trouble</MenuItem>
+            <MenuItem value={20}>Purchase</MenuItem>
+            <MenuItem value={30}>Poster</MenuItem>
+          </Select>
+        </FormControl>
+        <Typography
+          variant='h6'
+          noWrap
+          sx={{ fontSize: 18, color: '#522888', mt: 2 }}
+        >
+          Summary
+        </Typography>
+        <TextField
+          variant='outlined'
+          size='small'
+          inputProps={{ maxLength: 90 }}
+        />
+        <Typography
+          variant='h6'
+          noWrap
+          sx={{ fontSize: 18, color: '#522888', mt: 2 }}
+        >
+          Description
+        </Typography>
+        <TextField multiline inputProps={{ maxLength: 500 }} sx={{ mb: 2 }} />
 
-            <Select
-              required
-              value={category}
-              onChange={handleChangeCategory}
-              sx={{ height: 40 }}
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Card
+              sx={{
+                backgroundColor: '#522888',
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: 100,
+                borderRadius: 2,
+              }}
             >
-              <MenuItem value={10}>Trouble</MenuItem>
-              <MenuItem value={20}>Purchase</MenuItem>
-              <MenuItem value={30}>Poster</MenuItem>
-            </Select>
-
-            <Typography
-              variant='h6'
-              noWrap
-              sx={{ fontSize: 18, color: '#522888', mt: 2 }}
-            >
-              Summary
-            </Typography>
-            <TextField
-              variant='outlined'
-              size='small'
-              inputProps={{ maxLength: 90 }}
-              sx={{ width: 600 }}
-            />
-            <Typography
-              variant='h6'
-              noWrap
-              sx={{ fontSize: 18, color: '#522888', mt: 2 }}
-            >
-              Description
-            </Typography>
-            <TextField
-              multiline
-              inputProps={{ maxLength: 500 }}
-              sx={{ width: 600, mb: 2 }}
-            />
-          </FormControl>
-
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={4} lg={4}>
-              <Card
-                sx={{
-                  backgroundColor: '#522888',
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: 100,
-                  borderRadius: 2,
-                }}
+              <Typography
+                variant='h5'
+                sx={{ color: '#fff', fontWeight: 'bold' }}
               >
-                <Typography
-                  variant='h5'
-                  sx={{ color: '#fff', fontWeight: 'bold' }}
-                >
-                  Add Asset
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={4}>
-              <Card
-                sx={{
-                  backgroundColor: '#522888',
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: 100,
-                  borderRadius: 2,
-                }}
+                Add Property
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Card
+              sx={{
+                backgroundColor: '#522888',
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: 100,
+                borderRadius: 2,
+              }}
+            >
+              <Typography
+                variant='h5'
+                sx={{ color: '#fff', fontWeight: 'bold' }}
               >
-                <Typography
-                  variant='h5'
-                  sx={{ color: '#fff', fontWeight: 'bold' }}
-                >
-                  Add Image
-                </Typography>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={4}>
-              <Card
-                sx={{
-                  backgroundColor: '#522888',
-                  p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: 100,
-                  borderRadius: 2,
-                }}
+                Add Image
+              </Typography>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Card
+              sx={{
+                backgroundColor: '#522888',
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: 100,
+                borderRadius: 2,
+              }}
+            >
+              <Typography
+                variant='h5'
+                sx={{ color: '#fff', fontWeight: 'bold' }}
               >
-                <Typography
-                  variant='h5'
-                  sx={{ color: '#fff', fontWeight: 'bold' }}
-                >
-                  Add Documents
-                </Typography>
-              </Card>
-            </Grid>
+                Add Documents
+              </Typography>
+            </Card>
           </Grid>
         </Grid>
+
         <Grid container justifyContent='flex-end'>
           <Button
             size='large'

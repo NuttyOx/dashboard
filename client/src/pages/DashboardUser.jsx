@@ -20,7 +20,7 @@ const DashboardUser = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3} lg={3}>
             <Link
-              to='/newticket'
+              to='/newticketuser'
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <Card
@@ -44,7 +44,6 @@ const DashboardUser = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={3}>
             <Card
-              onClick={() => alert('Clicked!')}
               sx={{
                 backgroundColor: '#522888',
                 p: 2,
@@ -64,7 +63,6 @@ const DashboardUser = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} lg={3}>
             <Card
-              onClick={() => alert('Clicked!')}
               sx={{
                 backgroundColor: '#522888',
                 p: 2,
